@@ -2,95 +2,74 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* Emotion Tracker Design System - Dark, Caring, Futuristic Theme */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
-
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
-
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
-
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
-
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
-
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
-
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
-
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
-
-    --radius: 0.5rem;
-
-    --sidebar-background: 0 0% 98%;
-
-    --sidebar-foreground: 240 5.3% 26.1%;
-
-    --sidebar-primary: 240 5.9% 10%;
-
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
-  }
-
-  .dark {
-    --background: 222.2 84% 4.9%;
+    /* Dark Background System */
+    --background: 220 25% 6%;
+    --background-secondary: 220 20% 8%;
+    --background-tertiary: 220 15% 12%;
     --foreground: 210 40% 98%;
 
-    --card: 222.2 84% 4.9%;
+    /* Glass Cards */
+    --card: 220 20% 8%;
     --card-foreground: 210 40% 98%;
+    --card-glass: 220 15% 15%;
+    
+    /* Emotion Colors */
+    --emotion-happy: 45 100% 65%;
+    --emotion-calm: 200 85% 70%;
+    --emotion-neutral: 220 15% 75%;
+    --emotion-sad: 240 60% 65%;
+    --emotion-anxious: 15 85% 65%;
 
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
+    /* Futuristic Accents */
+    --primary: 200 100% 60%;
+    --primary-foreground: 220 25% 6%;
+    --primary-glow: 200 100% 80%;
+    
+    --accent: 180 100% 70%;
+    --accent-foreground: 220 25% 6%;
+    --accent-glow: 180 100% 85%;
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    /* Health Status Colors */
+    --health-excellent: 120 60% 65%;
+    --health-good: 80 70% 65%;
+    --health-moderate: 45 85% 65%;
+    --health-concerning: 15 85% 65%;
 
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
+    /* UI Elements */
+    --muted: 220 15% 25%;
+    --muted-foreground: 220 10% 65%;
+    --border: 220 15% 20%;
+    --input: 220 15% 15%;
+    --ring: 200 100% 60%;
 
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
-
-    --destructive: 0 62.8% 30.6%;
+    /* Interactive States */
+    --destructive: 0 75% 65%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --radius: 1rem;
+
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--accent)));
+    --gradient-emotion: linear-gradient(135deg, hsl(var(--emotion-calm)), hsl(var(--emotion-happy)));
+    --gradient-glass: linear-gradient(135deg, 
+      hsla(220, 15%, 15%, 0.8), 
+      hsla(220, 20%, 10%, 0.6));
+    --gradient-border: linear-gradient(135deg, 
+      hsla(var(--primary), 0.3), 
+      hsla(var(--accent), 0.3));
+
+    /* Shadows & Glows */
+    --shadow-glass: 0 8px 32px hsla(220, 25%, 3%, 0.4);
+    --shadow-glow: 0 0 40px hsla(var(--primary), 0.3);
+    --shadow-emotion: 0 0 30px hsla(var(--emotion-calm), 0.4);
+
+    /* Animation Variables */
+    --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-quick: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
   }
 }
 
@@ -101,5 +80,106 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
+    background-image: 
+      radial-gradient(circle at 20% 80%, hsla(200, 100%, 60%, 0.1) 0%, transparent 50%),
+      radial-gradient(circle at 80% 20%, hsla(180, 100%, 70%, 0.1) 0%, transparent 50%);
+    min-height: 100vh;
+  }
+}
+
+@layer components {
+  /* Glass Card Component */
+  .glass-card {
+    @apply relative overflow-hidden rounded-xl border;
+    background: var(--gradient-glass);
+    border: 1px solid hsla(var(--primary), 0.2);
+    box-shadow: var(--shadow-glass);
+    backdrop-filter: blur(20px);
+    transition: var(--transition-smooth);
+  }
+
+  .glass-card:hover {
+    border-color: hsla(var(--primary), 0.4);
+    box-shadow: var(--shadow-glass), var(--shadow-glow);
+    transform: translateY(-2px);
+  }
+
+  .glass-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: var(--gradient-border);
+  }
+
+  /* Emotion Status Indicator */
+  .emotion-indicator {
+    @apply text-6xl font-bold bg-gradient-to-br from-primary to-accent bg-clip-text text-transparent;
+    filter: drop-shadow(0 0 20px hsla(var(--primary), 0.5));
+    animation: pulse-glow 3s ease-in-out infinite;
+  }
+
+  /* Neon Button */
+  .neon-button {
+    @apply relative px-6 py-3 rounded-xl font-semibold transition-all duration-300;
+    background: var(--gradient-primary);
+    border: 1px solid hsla(var(--primary), 0.3);
+    box-shadow: 
+      0 0 20px hsla(var(--primary), 0.3),
+      inset 0 1px 0 hsla(255, 255%, 255%, 0.1);
+    text-shadow: 0 0 10px hsla(var(--primary), 0.8);
+  }
+
+  .neon-button:hover {
+    box-shadow: 
+      0 0 30px hsla(var(--primary), 0.6),
+      inset 0 1px 0 hsla(255, 255%, 255%, 0.2);
+    transform: translateY(-1px);
+  }
+
+  /* Health Score Ring */
+  .health-ring {
+    @apply relative flex items-center justify-center rounded-full;
+    background: conic-gradient(
+      from 0deg,
+      hsl(var(--health-concerning)) 0%,
+      hsl(var(--health-moderate)) 25%,
+      hsl(var(--health-good)) 50%,
+      hsl(var(--health-excellent)) 75%,
+      hsl(var(--health-excellent)) 100%
+    );
+    padding: 4px;
+  }
+
+  .health-ring::before {
+    content: '';
+    position: absolute;
+    inset: 4px;
+    background: hsl(var(--card));
+    border-radius: inherit;
+  }
+}
+
+@layer utilities {
+  /* Animation Keyframes */
+  @keyframes pulse-glow {
+    0%, 100% { 
+      filter: drop-shadow(0 0 20px hsla(var(--primary), 0.5));
+    }
+    50% { 
+      filter: drop-shadow(0 0 30px hsla(var(--primary), 0.8));
+    }
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+  }
+
+  @keyframes glow-pulse {
+    0%, 100% { box-shadow: 0 0 20px hsla(var(--accent), 0.3); }
+    50% { box-shadow: 0 0 40px hsla(var(--accent), 0.6); }
   }
 }
