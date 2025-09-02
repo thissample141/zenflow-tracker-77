@@ -64,7 +64,7 @@ export function EmotionCard({
       </div>
       
       <div className="space-y-2">
-        <div className={`emotion-indicator ${isLoading ? 'animate-pulse' : 'animate-pulse-glow'}`}>
+        <div className={`text-4xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent ${isLoading ? 'animate-pulse' : 'animate-pulse-glow'}`}>
           {displayValue}
         </div>
         

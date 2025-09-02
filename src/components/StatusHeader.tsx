@@ -27,7 +27,7 @@ export function StatusHeader() {
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-3">
           <div className="p-2 rounded-lg bg-gradient-to-br from-primary/20 to-accent/20">
-            <Brain className="h-6 w-6 text-primary animate-pulse-glow" />
+            <Brain className="h-6 w-6 text-primary animate-pulse" />
           </div>
           <div>
             <h1 className="text-xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">

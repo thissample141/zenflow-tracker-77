@@ -73,9 +73,6 @@ export function HealthScore({ score, status, trend = "stable" }: HealthScoreProp
             strokeDashoffset={strokeDashoffset}
             strokeLinecap="round"
             className="transition-all duration-1000 ease-out"
-            style={{
-              filter: `drop-shadow(0 0 10px hsl(var(--health-${status}) / 0.5))`
-            }}
           />
         </svg>
         

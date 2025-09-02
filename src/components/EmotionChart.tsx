@@ -48,7 +48,7 @@ export function EmotionChart({ title, data, type }: EmotionChartProps) {
             stroke="hsl(var(--accent))"
             strokeWidth="2"
             points="0,80 20,120 40,60 60,40 80,100 100,70 120,20 140,50"
-            className="animate-float"
+            className="opacity-80"
           />
         </svg>
       </div>
